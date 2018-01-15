@@ -8,8 +8,6 @@ import java.io.*;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-/** Kontroler pliku start.fxml, sceny startowej/glownej programu */
-
 public class FXMLstartController implements Initializable {
 
     @FXML
@@ -62,7 +60,7 @@ public class FXMLstartController implements Initializable {
 
     @FXML
     private void omnieAction(ActionEvent event) throws IOException {
-//        omnie.messagebox();
+        onas.messagebox();
     }
 
     @Override
