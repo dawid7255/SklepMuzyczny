@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0"
+      prefWidth="1024.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="Sample.FXMLstartController">
+    <children>
+        <MenuBar>
+            <menus>
+                <Menu mnemonicParsing="false" text="Plik">
+                    <items>
+                        <MenuItem fx:id="MenuItemSTART" mnemonicParsing="false" onAction="#STARTAction" text="START"/>
+                        <MenuItem fx:id="MenuItemotworz_plik" mnemonicParsing="false" onAction="#otworz_plikAction"
+                                  text="Otwórz plik"/>
+                        <MenuItem fx:id="MenuItemzapisz_plik" mnemonicParsing="false" onAction="#zapisz_plikAction"
+                                  text="Zapisz do pliku"/>
+                        <SeparatorMenuItem mnemonicParsing="false"/>
+                        <MenuItem fx:id="MenuItemzamknij" mnemonicParsing="false" onAction="#zamknijAction"
+                                  text="Zamknij program"/>
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Instrumenty">
+                    <items>
+                        <MenuItem fx:id="MenuItemwyswietl_instrument" mnemonicParsing="false"
+                                  onAction="#wyswietl_instrumentyAction" text="Wyświetl"/>
+                        <MenuItem fx:id="MenuItemdodaj_instrument" mnemonicParsing="false"
+                                  onAction="#dodaj_instrumentyAction" text="Dodaj"/>
+                        <SeparatorMenuItem mnemonicParsing="false"/>
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Usługi">
+                    <items>
+                        <MenuItem fx:id="MenuItemwyswietl_uslugi" mnemonicParsing="false"
+                                  onAction="#wyswietl_uslugiAction" text="Wyświetl"/>
+                        <MenuItem fx:id="MenuItemdodaj_uslugi" mnemonicParsing="false" onAction="#dodaj_uslugiAction"
+                                  text="Dodaj"/>
+                        <SeparatorMenuItem mnemonicParsing="false"/>
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Pomoc">
+                    <items>
+                        <MenuItem fx:id="MenuItemomnie" mnemonicParsing="false" onAction="#omnieAction" text="O mnie"/>
+                        <SeparatorMenuItem mnemonicParsing="false"/>
+                    </items>
+                </Menu>
+            </menus>
+            <opaqueInsets>
+                <Insets/>
+            </opaqueInsets>
+        </MenuBar>
+    </children>
+</VBox>
