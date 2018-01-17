@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Sample.FXMLdodaj_instrumentController">
+    <children>
+        <MenuBar prefWidth="1024.0">
+            <menus>
+                <Menu mnemonicParsing="false" text="Plik">
+                    <items>
+                        <MenuItem fx:id="MenuItemSTART" mnemonicParsing="false" onAction="#STARTAction" text="START" />
+                        <MenuItem fx:id="MenuItemotworz_plik" mnemonicParsing="false" onAction="#otworz_plikAction" text="Otwórz plik" />
+                        <MenuItem fx:id="MenuItemzapisz_plik" mnemonicParsing="false" onAction="#zapisz_plikAction" text="Zapisz do pliku" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem fx:id="MenuItemzamknij" mnemonicParsing="false" onAction="#zamknijAction" text="Zamknij program" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Instrumenty">
+                    <items>
+                        <MenuItem fx:id="MenuItemwyswietl_instrument" mnemonicParsing="false" onAction="#wyswietl_instrumentyAction" text="Wyświetl" />
+                        <MenuItem fx:id="MenuItemdodaj_instrument" mnemonicParsing="false" onAction="#dodaj_instrumentyAction" text="Dodaj" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Usługi">
+                    <items>
+                        <MenuItem fx:id="MenuItemwyswietl_uslugi" mnemonicParsing="false" onAction="#wyswietl_uslugiAction" text="Wyświetl" />
+                        <MenuItem fx:id="MenuItemdodaj_uslugi" mnemonicParsing="false" onAction="#dodaj_uslugiAction" text="Dodaj" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Pomoc">
+                    <items>
+                        <MenuItem fx:id="MenuItemomnie" mnemonicParsing="false" onAction="#omnieAction" text="O mnie" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                    </items>
+                </Menu>
+            </menus>
+            <opaqueInsets>
+                <Insets />
+            </opaqueInsets>
+        </MenuBar>
+        <ScrollPane prefHeight="600.0" prefWidth="1024.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="25.0">
+            <content>
+                <TabPane prefHeight="600.0" prefWidth="1024.0" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                        <Tab text="Gitara">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                    <children>
+                                        <Label alignment="CENTER_RIGHT" layoutX="14.0" layoutY="27.0" prefHeight="20.0" prefWidth="120.0" text="Nazwa:" textAlignment="RIGHT" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="27.0">
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font>
+                                        </Label>
+                                        <Label alignment="CENTER_RIGHT" layoutX="14.0" layoutY="67.0" prefHeight="20.0" prefWidth="120.0" text="Producent:" textAlignment="RIGHT" AnchorPane.topAnchor="67.0">
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font>
+                                        </Label>
+                                        <Label alignment="CENTER_RIGHT" layoutX="14.0" layoutY="107.0" prefHeight="20.0" prefWidth="120.0" text="Cena:" textAlignment="RIGHT">
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font>
+                                        </Label>
+                                        <Label alignment="CENTER_RIGHT" layoutX="14.0" layoutY="147.0" prefHeight="20.0" prefWidth="120.0" text="Liczba strun:" textAlignment="RIGHT">
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font>
+                                        </Label>
+                                        <Label alignment="CENTER_RIGHT" layoutX="14.0" layoutY="188.0" prefHeight="20.0" prefWidth="119.0" text="Liczba przystawek:" textAlignment="RIGHT">
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font>
+                                        </Label>
+                                        <Label alignment="CENTER_RIGHT" layoutX="15.0" layoutY="274.0" prefHeight="20.0" prefWidth="119.0" text="Rodzaj:" textAlignment="RIGHT" AnchorPane.topAnchor="267.0">
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font>
+                                        </Label>
+                                        <Label alignment="CENTER_RIGHT" layoutX="15.0" layoutY="228.0" prefHeight="20.0" prefWidth="119.0" text="Liczba progów:" textAlignment="RIGHT">
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font>
+                                        </Label>
+                                        <Label alignment="CENTER" layoutX="490.0" layoutY="27.0" prefHeight="20.0" prefWidth="120.0" text="Zdjęcie:" textAlignment="RIGHT" AnchorPane.leftAnchor="490.0" AnchorPane.topAnchor="27.0">
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font>
+                                        </Label>
+                                        <TextField fx:id="nazwaGitara" alignment="CENTER" layoutX="141.0" layoutY="25.0" promptText="..." AnchorPane.leftAnchor="141.0" AnchorPane.topAnchor="25.0">
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font>
+                                        </TextField>
+                                        <TextField fx:id="producentGitara" alignment="CENTER" layoutX="141.0" layoutY="65.0" promptText="..." AnchorPane.leftAnchor="141.0" AnchorPane.topAnchor="65.0">
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font>
+                                        </TextField>
+                                        <TextField fx:id="cenaGitara" alignment="CENTER_RIGHT" layoutX="141.0" layoutY="105.0" promptText="0.00" AnchorPane.topAnchor="105.0">
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font>
+                                        </TextField>
+                                        <TextField fx:id="liczbastrunGitara" alignment="CENTER" layoutX="141.0" layoutY="145.0" promptText="..." AnchorPane.topAnchor="145.0">
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font>
+                                        </TextField>
+                                        <TextField fx:id="liczbaprzystawekGitara" alignment="CENTER" layoutX="141.0" layoutY="186.0" promptText="..." AnchorPane.topAnchor="185.0">
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font>
+                                        </TextField>
+                                        <TextField fx:id="liczbaprogowGitara" alignment="CENTER" layoutX="141.0" layoutY="226.0" promptText="..." AnchorPane.topAnchor="225.0">
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font>
+                                            <opaqueInsets>
+                                                <Insets />
+                                            </opaqueInsets>
+                                        </TextField>
+                                        <Label fx:id="zdjecieGitara" alignment="CENTER" contentDisplay="CENTER" layoutX="400.0" layoutY="55.0" prefHeight="225.0" prefWidth="300.0" style="-fx-background-color: #ffffff;" textAlignment="CENTER" />
+                                        <TextField fx:id="sciezkaobrazuGitara" alignment="CENTER" layoutX="400.0" layoutY="288.0" prefWidth="218.0" promptText="Podaj ścieżke do obrazu" AnchorPane.leftAnchor="400.0" />
+                                        <Button layoutX="623.0" layoutY="288.0" mnemonicParsing="false" onAction="#otworzObrazGitaraAction" text="Otwórz plik" AnchorPane.leftAnchor="623.0" AnchorPane.topAnchor="288.0" />
+                                        <Button fx:id="dodajGitara" layoutX="210.0" layoutY="339.0" mnemonicParsing="false" onAction="#dodajGitaraAction" prefHeight="30.0" prefWidth="381.0" text="Dodaj" AnchorPane.leftAnchor="210.0" AnchorPane.topAnchor="339.0">
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font>
+                                        </Button>
+                                        <Label layoutX="316.0" layoutY="110.0" prefHeight="20.0" prefWidth="120.0" text="PLN" textAlignment="RIGHT" AnchorPane.leftAnchor="316.0" AnchorPane.topAnchor="110.0">
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font>
+                                        </Label>
+                                        <ComboBox fx:id="rodzajGitara" layoutX="141.0" layoutY="268.0" promptText="Rodzaj gitary" visibleRowCount="4" />
+                                    </children>
+                                </AnchorPane>
+                            </content>
+                        </Tab>
+                        <Tab text="Klawisze">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                    <children>
+                                        <Label alignment="CENTER_RIGHT" layoutX="14.0" layoutY="27.0" prefHeight="20.0" prefWidth="120.0" text="Nazwa:" textAlignment="RIGHT" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="27.0">
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font>
+                                        </Label>
+                                        <Label alignment="CENTER_RIGHT" layoutX="14.0" layoutY="70.0" prefHeight="20.0" prefWidth="120.0" text="Producent:" textAlignment="RIGHT" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="67.0">
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font>
+                                        </Label>
+                                        <Label alignment="CENTER_RIGHT" layoutX="14.0" layoutY="110.0" prefHeight="20.0" prefWidth="120.0" text="Cena:" textAlignment="RIGHT" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="107.0">
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font>
+                                        </Label>
+                                        <Label alignment="CENTER_RIGHT" layoutX="15.0" layoutY="154.0" prefHeight="20.0" prefWidth="119.0" text="Rodzaj:" textAlignment="RIGHT" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="154.0">
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font>
+                                        </Label>
+                                        <Label alignment="CENTER" layoutX="485.0" layoutY="31.0" prefHeight="20.0" prefWidth="120.0" text="Zdjęcie:" textAlignment="RIGHT" AnchorPane.leftAnchor="490.0" AnchorPane.topAnchor="27.0">
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font>
+                                        </Label>
+                                        <TextField fx:id="nazwaKlawisze" alignment="CENTER" layoutX="141.0" layoutY="26.0" promptText="..." AnchorPane.leftAnchor="141.0" AnchorPane.topAnchor="25.0">
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font>
+                                        </TextField>
+                                        <TextField fx:id="producentKlawisze" alignment="CENTER" layoutX="141.0" layoutY="61.0" promptText="..." AnchorPane.topAnchor="65.0">
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font>
+                                        </TextField>
+                                        <TextField fx:id="cenaKlawisze" alignment="CENTER_RIGHT" layoutX="141.0" layoutY="109.0" promptText="0,00" AnchorPane.topAnchor="105.0">
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font>
+                                        </TextField>
+                                        <Label fx:id="zdjęcieKlawisze" alignment="CENTER" contentDisplay="CENTER" layoutX="400.0" layoutY="55.0" prefHeight="225.0" prefWidth="300.0" style="-fx-background-color: #ffffff;" textAlignment="CENTER" textFill="#da0c0c" />
+                                        <TextField fx:id="sciezkaobrazuKlawisze" alignment="CENTER" layoutX="400.0" layoutY="288.0" prefHeight="17.0" prefWidth="218.0" promptText="Podaj ścieżke do obrazu" AnchorPane.leftAnchor="400.0" />
+                                        <Button layoutX="623.0" layoutY="288.0" mnemonicParsing="false" onAction="#otworzObrazKlawiszeAction" text="Otwórz plik" AnchorPane.leftAnchor="623.0" AnchorPane.topAnchor="288.0" />
+                                        <Button fx:id="dodajKlawisze" layoutX="210.0" layoutY="342.0" mnemonicParsing="false" onAction="#dodajKlawiszeAction" prefHeight="30.0" prefWidth="381.0" text="Dodaj" AnchorPane.leftAnchor="210.0" AnchorPane.topAnchor="339.0">
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font>
+                                        </Button>
+                                        <Label layoutX="326.0" layoutY="120.0" prefHeight="20.0" prefWidth="120.0" text="PLN" textAlignment="RIGHT" AnchorPane.leftAnchor="316.0" AnchorPane.topAnchor="110.0">
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font>
+                                        </Label>
+                                        <ComboBox fx:id="rodzajKlawisze" layoutX="141.0" layoutY="152.0" promptText="Rodzaj klawiszy" visibleRowCount="4" />
+                                    </children>
+                                </AnchorPane>
+                            </content>
+                        </Tab>
+                        <Tab text="Perkusja">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                    <children>
+                                        <Label alignment="CENTER_RIGHT" layoutX="14.0" layoutY="27.0" prefHeight="20.0" prefWidth="120.0" text="Nazwa:" textAlignment="RIGHT" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="27.0">
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font>
+                                        </Label>
+                                        <Label alignment="CENTER_RIGHT" layoutX="14.0" layoutY="67.0" prefHeight="20.0" prefWidth="120.0" text="Producent:" textAlignment="RIGHT" AnchorPane.topAnchor="67.0">
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font>
+                                        </Label>
+                                        <Label alignment="CENTER_RIGHT" layoutX="14.0" layoutY="107.0" prefHeight="20.0" prefWidth="120.0" text="Cena:" textAlignment="RIGHT">
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font>
+                                        </Label>
+                                        <Label alignment="CENTER_RIGHT" layoutX="15.0" layoutY="152.0" prefHeight="20.0" prefWidth="119.0" text="Rodzaj:" textAlignment="RIGHT" AnchorPane.topAnchor="154.0">
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font>
+                                        </Label>
+                                        <Label alignment="CENTER" layoutX="490.0" layoutY="27.0" prefHeight="20.0" prefWidth="120.0" text="Zdjęcie:" textAlignment="RIGHT" AnchorPane.leftAnchor="490.0" AnchorPane.topAnchor="27.0">
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font>
+                                        </Label>
+                                        <TextField fx:id="nazwaPerkusja" alignment="CENTER" layoutX="141.0" layoutY="25.0" promptText="..." AnchorPane.leftAnchor="141.0" AnchorPane.topAnchor="25.0">
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font>
+                                        </TextField>
+                                        <TextField fx:id="producentPerkusja" alignment="CENTER" layoutX="141.0" layoutY="65.0" promptText="..." AnchorPane.leftAnchor="141.0" AnchorPane.topAnchor="65.0">
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font>
+                                        </TextField>
+                                        <TextField fx:id="cenaPerkusja" alignment="CENTER_RIGHT" layoutX="141.0" layoutY="105.0" promptText="0.00" AnchorPane.topAnchor="105.0">
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font>
+                                        </TextField>
+                                        <Label fx:id="zdjeciePerkusja" alignment="CENTER" contentDisplay="CENTER" layoutX="400.0" layoutY="55.0" prefHeight="225.0" prefWidth="300.0" style="-fx-background-color: #ffffff;" textAlignment="CENTER" />
+                                        <TextField fx:id="sciezkaobrazuPerkusja" alignment="CENTER" layoutX="400.0" layoutY="288.0" prefHeight="17.0" prefWidth="218.0" promptText="Podaj ścieżke do obrazu" AnchorPane.leftAnchor="400.0" />
+                                        <Button layoutX="623.0" layoutY="288.0" mnemonicParsing="false" onAction="#otworzObrazPerkusjaAction" text="Otwórz plik" AnchorPane.leftAnchor="623.0" AnchorPane.topAnchor="288.0" />
+                                        <Button fx:id="dodajPerkusja" layoutX="210.0" layoutY="339.0" mnemonicParsing="false" onAction="#dodajPerkusjaAction" prefHeight="30.0" prefWidth="381.0" text="Dodaj" AnchorPane.leftAnchor="210.0" AnchorPane.topAnchor="339.0">
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font>
+                                        </Button>
+                                        <Label layoutX="316.0" layoutY="110.0" prefHeight="20.0" prefWidth="120.0" text="PLN" textAlignment="RIGHT" AnchorPane.leftAnchor="316.0" AnchorPane.topAnchor="110.0">
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font>
+                                        </Label>
+                                        <ComboBox fx:id="rodzajPerkusja" layoutX="141.0" layoutY="152.0" promptText="Rodzaj perkusji" visibleRowCount="4" />
+                                    </children>
+                                </AnchorPane>
+                            </content>
+                        </Tab>
+                        <Tab text="Nagłośnienie">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                    <children>
+                                        <Label alignment="CENTER_RIGHT" layoutX="15.0" layoutY="29.0" prefHeight="20.0" prefWidth="119.0" text="Rodzaj:" textAlignment="RIGHT">
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font>
+                                        </Label>
+                                        <Label alignment="CENTER_RIGHT" layoutX="14.0" layoutY="66.0" prefHeight="20.0" prefWidth="120.0" text="Nazwa:" textAlignment="RIGHT" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="66.0">
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font>
+                                        </Label>
+                                        <Label alignment="CENTER_RIGHT" layoutX="14.0" layoutY="106.0" prefHeight="20.0" prefWidth="120.0" text="Producent:" textAlignment="RIGHT" AnchorPane.topAnchor="106.0">
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font>
+                                        </Label>
+                                        <Label alignment="CENTER_RIGHT" layoutX="14.0" layoutY="146.0" prefHeight="20.0" prefWidth="120.0" text="Cena:" textAlignment="RIGHT">
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font>
+                                        </Label>
+                                        <Label alignment="CENTER_RIGHT" layoutX="15.0" layoutY="193.0" prefHeight="20.0" prefWidth="119.0" text="Klasa" textAlignment="RIGHT" AnchorPane.topAnchor="193.0">
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font>
+                                        </Label>
+                                        <Label alignment="CENTER" layoutX="490.0" layoutY="27.0" prefHeight="20.0" prefWidth="120.0" text="Zdjęcie:" textAlignment="RIGHT" AnchorPane.leftAnchor="490.0" AnchorPane.topAnchor="27.0">
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font>
+                                        </Label>
+                                        <TextField fx:id="nazwaNaglosnienie" alignment="CENTER" layoutX="141.0" layoutY="64.0" promptText="..." AnchorPane.leftAnchor="141.0" AnchorPane.topAnchor="64.0">
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font>
+                                        </TextField>
+                                        <TextField fx:id="producentNaglosnienie" alignment="CENTER" layoutX="141.0" layoutY="104.0" promptText="..." AnchorPane.leftAnchor="141.0" AnchorPane.topAnchor="104.0">
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font>
+                                        </TextField>
+                                        <TextField fx:id="cenaNaglosnienie" alignment="CENTER_RIGHT" layoutX="141.0" layoutY="144.0" promptText="0.00" AnchorPane.topAnchor="144.0">
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font>
+                                        </TextField>
+                                        <Label fx:id="zdjecieNaglosnienie" alignment="CENTER" contentDisplay="CENTER" layoutX="400.0" layoutY="55.0" prefHeight="225.0" prefWidth="300.0" style="-fx-background-color: #ffffff;" textAlignment="CENTER" />
+                                        <TextField fx:id="sciezkaobrazuNaglosnienie" alignment="CENTER" layoutX="400.0" layoutY="288.0" prefHeight="17.0" prefWidth="218.0" promptText="Podaj ścieżke do obrazu" AnchorPane.leftAnchor="400.0" />
+                                        <Button layoutX="623.0" layoutY="288.0" mnemonicParsing="false" onAction="#otworzObrazNaglosnienieAction" text="Otwórz plik" AnchorPane.leftAnchor="623.0" AnchorPane.topAnchor="288.0" />
+                                        <Button fx:id="dodajNaglosnienie" layoutX="210.0" layoutY="339.0" mnemonicParsing="false" onAction="#dodajNaglosnienieAction" prefHeight="30.0" prefWidth="381.0" text="Dodaj" AnchorPane.leftAnchor="210.0" AnchorPane.topAnchor="339.0">
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font>
+                                        </Button>
+                                        <Label layoutX="316.0" layoutY="149.0" prefHeight="20.0" prefWidth="120.0" text="PLN" textAlignment="RIGHT" AnchorPane.leftAnchor="316.0" AnchorPane.topAnchor="149.0">
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font>
+                                        </Label>
+                                        <ComboBox fx:id="klasaNaglosnienie" layoutX="141.0" layoutY="191.0" promptText="Klasa nagłośnienia" visibleRowCount="4" />
+                                        <ComboBox fx:id="rodzajNaglosnienie" layoutX="141.0" layoutY="27.0" promptText="Rodzaj nagłośnienia" visibleRowCount="4" />
+                                    </children>
+                                </AnchorPane>
+                            </content>
+                        </Tab>
+                    </tabs>
+                </TabPane>
+            </content>
+        </ScrollPane>
+    </children>
+</AnchorPane>
