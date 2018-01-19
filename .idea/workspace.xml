@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b5afb8e7-dd20-4ee2-b961-37c8571239e0" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="b5afb8e7-dd20-4ee2-b961-37c8571239e0" name="Default" comment="" />
     <ignored path="SklepIO.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -483,12 +481,12 @@
       <workItem from="1516051046410" duration="620000" />
       <workItem from="1516203735708" duration="1537000" />
       <workItem from="1516206166732" duration="883000" />
-      <workItem from="1516349095543" duration="1675000" />
+      <workItem from="1516349095543" duration="1977000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12501000" />
+    <option name="totallyTimeSpent" value="12803000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
