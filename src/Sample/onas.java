@@ -12,18 +12,21 @@ public class onas {
     public static void messagebox(){
         String title = "O mnie";
         String message = "Projekt: Sklep muzyczny " +
-                "\n\nDawid Wiatrowski " +
-                "\n\nNumer albumu 129028" +
+                "\n\nDawid Wiatrowski" +
+                "\nNumer albumu 129028" +
+                "\n\nPaweł Szajda" +
+                "\nNumer albumu 129022" +
                 "\n\nInformatyka [WI]"+
-                "\n\nStudia niestacjonarne" +
+                "\nStudia niestacjonarne" +
                 "\n\nE-mail: " +
-                "\ndawid.wiatrowski@student.put.poznan.pl";
+                "\ndawid.wiatrowski@student.put.poznan.pl" +
+                "\npawel.szajda@student.put.poznan.pl";
         Stage window = new Stage();
 
         window.initModality(Modality.APPLICATION_MODAL);
         window.setTitle(title);
         window.setMinWidth(400);
-        window.setMinHeight(400);
+        window.setMinHeight(450);
 
         javafx.scene.control.Label label = new javafx.scene.control.Label();
         label.setText(message);

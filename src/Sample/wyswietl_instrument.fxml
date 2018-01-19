@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Sample.FXMLwyswietl_instrumentController">
+    <children>
+        <MenuBar prefWidth="1024.0">
+            <menus>
+                <Menu mnemonicParsing="false" text="Plik">
+                    <items>
+                        <MenuItem fx:id="MenuItemSTART" mnemonicParsing="false" onAction="#STARTAction" text="START" />
+                        <MenuItem fx:id="MenuItemotworz_plik" mnemonicParsing="false" onAction="#otworz_plikAction" text="Otwórz plik" />
+                        <MenuItem fx:id="MenuItemzapisz_plik" mnemonicParsing="false" onAction="#zapisz_plikAction" text="Zapisz do pliku" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem fx:id="MenuItemzamknij" mnemonicParsing="false" onAction="#zamknijAction" text="Zamknij program" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Instrumenty">
+                    <items>
+                        <MenuItem fx:id="MenuItemwyswietl_instrument" mnemonicParsing="false" onAction="#wyswietl_instrumentyAction" text="Wyświetl" />
+                        <MenuItem fx:id="MenuItemdodaj_instrument" mnemonicParsing="false" onAction="#dodaj_instrumentyAction" text="Dodaj" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Usługi">
+                    <items>
+                        <MenuItem fx:id="MenuItemwyswietl_uslugi" mnemonicParsing="false" onAction="#wyswietl_uslugiAction" text="Wyświetl" />
+                        <MenuItem fx:id="MenuItemdodaj_uslugi" mnemonicParsing="false" onAction="#dodaj_uslugiAction" text="Dodaj" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Pomoc">
+                    <items>
+                        <MenuItem fx:id="MenuItemomnie" mnemonicParsing="false" onAction="#omnieAction" text="O mnie" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                    </items>
+                </Menu>
+            </menus>
+            <opaqueInsets>
+                <Insets />
+            </opaqueInsets>
+        </MenuBar>
+        <TabPane prefHeight="575.0" prefWidth="1024.0" tabClosingPolicy="UNAVAILABLE">
+            <tabs>
+                <Tab text="Gitary">
+                    <content>
+                        <HBox prefHeight="560.0" prefWidth="1024.0">
+                            <children>
+                                <VBox alignment="CENTER" prefHeight="560.0" prefWidth="200.0">
+                                    <children>
+                              <Button fx:id="UsunGitara" layoutX="74.0" layoutY="96.0" mnemonicParsing="false" onAction="#UsunGitaraAction" text="Usuń">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Button>
+                                        <Button fx:id="EdytujGitara" layoutX="10.0" layoutY="423.0" mnemonicParsing="false" onAction="#EdytujGitaraAction" text="Edytuj">
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font>
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                                        </Button>
+                                        <Label text="Edycja">
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets top="10.0" />
+                                            </VBox.margin>
+                                        </Label>
+                                        <TextField fx:id="nazwaGitara" alignment="CENTER" promptText="...">
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets top="10.0" />
+                                            </VBox.margin>
+                                        </TextField>
+                                        <TextField fx:id="producentGitara" alignment="CENTER" promptText="...">
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets top="10.0" />
+                                            </VBox.margin>
+                                        </TextField>
+                                        <TextField fx:id="cenaGitara" alignment="CENTER_RIGHT" promptText="0.00">
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets top="10.0" />
+                                            </VBox.margin>
+                                        </TextField>
+                                        <TextField fx:id="liczbastrunGitara" alignment="CENTER" promptText="...">
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets top="10.0" />
+                                            </VBox.margin>
+                                        </TextField>
+                                        <TextField fx:id="liczbaprzystawekGitara" alignment="CENTER" promptText="...">
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets top="10.0" />
+                                            </VBox.margin>
+                                        </TextField>
+                                        <TextField fx:id="liczbaprogowGitara" alignment="CENTER" promptText="...">
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font>
+                                            <opaqueInsets>
+                                                <Insets />
+                                            </opaqueInsets>
+                                            <VBox.margin>
+                                                <Insets top="10.0" />
+                                            </VBox.margin>
+                                        </TextField>
+                                        <ComboBox fx:id="rodzajGitara" promptText="Rodzaj gitary" visibleRowCount="4">
+                                            <VBox.margin>
+                                                <Insets top="10.0" />
+                                            </VBox.margin>
+                                        </ComboBox>
+                                        <Button fx:id="zatwierdzEdycjeGitara" mnemonicParsing="false" onAction="#zatwierdzEdycjeGitaraAction" prefHeight="30.0" prefWidth="175.0" text="Zatwierdź zmiany">
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets top="10.0" />
+                                            </VBox.margin>
+                                        </Button>
+                                    </children>
+                                    <HBox.margin>
+                                        <Insets left="10.0" right="10.0" />
+                                    </HBox.margin>
+                                </VBox>
+                                <TableView fx:id="tabelaGitar" prefWidth="830.0">
+                                    <columns>
+                                        <TableColumn fx:id="kolumnaGitaraNazwa" maxWidth="200.0" minWidth="50.0" prefWidth="120.0" text="Nazwa" />
+                                        <TableColumn fx:id="kolumnaGitaraProducent" maxWidth="200.0" minWidth="50.0" prefWidth="120.0" text="Producent" />
+                                        <TableColumn fx:id="kolumnaGitaraCena" maxWidth="200.0" minWidth="50.0" prefWidth="120.0" text="Cena" />
+                                        <TableColumn fx:id="kolumnaGitaraLiczbaStrun" maxWidth="200.0" minWidth="50.0" prefWidth="120.0" text="Liczba strun" />
+                                        <TableColumn fx:id="kolumnaGitaraLiczbaPrzystawek" maxWidth="200.0" minWidth="50.0" prefWidth="120.0" text="Liczba przystawek" />
+                                        <TableColumn fx:id="kolumnaGitaraLiczbaProgow" maxWidth="200.0" minWidth="50.0" prefWidth="120.0" text="Liczba progów" />
+                                        <TableColumn fx:id="kolumnaGitaraRodzaj" maxWidth="200.0" minWidth="50.0" prefWidth="120.0" text="Rodzaj" />
+                                    </columns>
+                                </TableView>
+                            </children>
+                        </HBox>
+                    </content>
+                </Tab>
+                <Tab text="Klawisze">
+                    <content>
+                        <HBox prefHeight="560.0" prefWidth="1024.0">
+                            <children>
+                                <VBox alignment="CENTER" prefHeight="560.0" prefWidth="200.0">
+                                    <children>
+                              <Button fx:id="UsunKlawisze" mnemonicParsing="false" onAction="#UsunKlawiszeAction" text="Usuń">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="EdytujKlawisze" mnemonicParsing="false" onAction="#EdytujKlawiszeAction" text="Edytuj">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                              </Button>
+                                        <Label text="Edycja">
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets top="10.0" />
+                                            </VBox.margin>
+                                        </Label>
+                                        <TextField fx:id="nazwaKlawisze" alignment="CENTER" promptText="...">
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets top="10.0" />
+                                            </VBox.margin>
+                                        </TextField>
+                                        <TextField fx:id="producentKlawisze" alignment="CENTER" promptText="...">
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets top="10.0" />
+                                            </VBox.margin>
+                                        </TextField>
+                                        <TextField fx:id="cenaKlawisze" alignment="CENTER_RIGHT" promptText="0.00">
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets top="10.0" />
+                                            </VBox.margin>
+                                        </TextField>
+                                        <ComboBox fx:id="rodzajKlawisze" promptText="Rodzaj klawiszy" visibleRowCount="4">
+                                            <VBox.margin>
+                                                <Insets top="10.0" />
+                                            </VBox.margin>
+                                        </ComboBox>
+                                        <Button fx:id="zatwierdzEdycjeKlawisze" mnemonicParsing="false" onAction="#zatwierdzEdycjeKlawiszeAction" prefHeight="30.0" prefWidth="175.0" text="Zatwierdź zmiany">
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets top="10.0" />
+                                            </VBox.margin>
+                                        </Button>
+                                    </children>
+                                    <HBox.margin>
+                                        <Insets left="10.0" right="10.0" />
+                                    </HBox.margin>
+                                </VBox>
+                                <TableView fx:id="tabelaKlawisze" prefWidth="830.0">
+                                    <columns>
+                                        <TableColumn fx:id="kolumnaKlawiszeNazwa" maxWidth="200.0" minWidth="50.0" prefWidth="120.0" text="Nazwa" />
+                                        <TableColumn fx:id="kolumnaKlawiszeProducent" maxWidth="200.0" minWidth="50.0" prefWidth="120.0" text="Producent" />
+                                        <TableColumn fx:id="kolumnaKlawiszeCena" maxWidth="200.0" minWidth="50.0" prefWidth="120.0" text="Cena" />
+                                        <TableColumn fx:id="kolumnaKlawiszeRodzaj" maxWidth="200.0" minWidth="50.0" prefWidth="120.0" text="Rodzaj" />
+                                    </columns>
+                                </TableView>
+                            </children>
+                        </HBox>
+                    </content>
+                </Tab>
+                <Tab text="Perkusje">
+                    <content>
+                        <HBox prefHeight="560.0" prefWidth="1024.0">
+                            <children>
+                                <VBox alignment="CENTER" prefHeight="560.0" prefWidth="200.0">
+                                    <children>
+                              <Button fx:id="UsunPerkusje" mnemonicParsing="false" onAction="#UsunPerkusjeAction" text="Usuń">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="EdytujPerkusje" mnemonicParsing="false" onAction="#EdytujPerkusjeAction" text="Edytuj">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                              </Button>
+                                        <Label text="Edycja">
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets top="10.0" />
+                                            </VBox.margin>
+                                        </Label>
+                                        <TextField fx:id="nazwaPerkusja" alignment="CENTER" promptText="...">
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets top="10.0" />
+                                            </VBox.margin>
+                                        </TextField>
+                                        <TextField fx:id="producentPerkusja" alignment="CENTER" promptText="...">
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets top="10.0" />
+                                            </VBox.margin>
+                                        </TextField>
+                                        <TextField fx:id="cenaPerkusja" alignment="CENTER_RIGHT" promptText="0.00">
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets top="10.0" />
+                                            </VBox.margin>
+                                        </TextField>
+                                        <ComboBox fx:id="rodzajPerkusja" promptText="Rodzaj perkusji" visibleRowCount="4">
+                                            <VBox.margin>
+                                                <Insets top="10.0" />
+                                            </VBox.margin>
+                                        </ComboBox>
+                                        <Button fx:id="zatwierdzEdycjePerkusja" mnemonicParsing="false" onAction="#zatwierdzEdycjePerkusjaAction" prefHeight="30.0" prefWidth="175.0" text="Zatwierdź zmiany">
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets top="10.0" />
+                                            </VBox.margin>
+                                        </Button>
+                                    </children>
+                                    <HBox.margin>
+                                        <Insets left="10.0" right="10.0" />
+                                    </HBox.margin>
+                                </VBox>
+                                <TableView fx:id="tabelaPerkusja" prefWidth="830.0">
+                                    <columns>
+                                        <TableColumn fx:id="kolumnaPerkusjaNazwa" maxWidth="200.0" minWidth="50.0" prefWidth="120.0" text="Nazwa" />
+                                        <TableColumn fx:id="kolumnaPerkusjaProducent" maxWidth="200.0" minWidth="50.0" prefWidth="120.0" text="Producent" />
+                                        <TableColumn fx:id="kolumnaPerkusjaCena" maxWidth="200.0" minWidth="50.0" prefWidth="120.0" text="Cena" />
+                                        <TableColumn fx:id="kolumnaPerkusjaRodzaj" maxWidth="200.0" minWidth="50.0" prefWidth="120.0" text="Rodzaj" />
+                                    </columns>
+                                </TableView>
+                            </children>
+                        </HBox>
+                    </content>
+                </Tab>
+                <Tab text="Nagłośnienie">
+                    <content>
+                        <HBox prefHeight="560.0" prefWidth="1024.0">
+                            <children>
+                                <VBox alignment="CENTER" prefHeight="560.0" prefWidth="200.0">
+                                    <children>
+                              <Button fx:id="UsunNaglosnienie" mnemonicParsing="false" onAction="#UsunNaglosnienieAction" text="Usuń">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="EdytujNaglosnienie" mnemonicParsing="false" onAction="#EdytujNaglosnienieAction" text="Edytuj">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                              </Button>
+                                        <Label text="Edycja">
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets top="10.0" />
+                                            </VBox.margin>
+                                        </Label>
+                                        <ComboBox fx:id="rodzajNaglosnienie" promptText="Rodzaj nagłośnienia" visibleRowCount="4">
+                                            <VBox.margin>
+                                                <Insets top="10.0" />
+                                            </VBox.margin>
+                                        </ComboBox>
+                                        <TextField fx:id="nazwaNaglosnienie" alignment="CENTER" promptText="...">
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets top="10.0" />
+                                            </VBox.margin>
+                                        </TextField>
+                                        <TextField fx:id="producentNaglosnienie" alignment="CENTER" promptText="...">
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets top="10.0" />
+                                            </VBox.margin>
+                                        </TextField>
+                                        <TextField fx:id="cenaNaglosnienie" alignment="CENTER_RIGHT" promptText="0.00">
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets top="10.0" />
+                                            </VBox.margin>
+                                        </TextField>
+                                        <ComboBox fx:id="klasaNaglosnienie" promptText="Klasa nagłośnienia" visibleRowCount="4">
+                                            <VBox.margin>
+                                                <Insets top="10.0" />
+                                            </VBox.margin>
+                                        </ComboBox>
+                                        <Button fx:id="zatwierdzEdycjeNaglosnienie" mnemonicParsing="false" onAction="#zatwierdzEdycjeNaglosnienieAction" prefHeight="30.0" prefWidth="175.0" text="Zatwierdź zmiany">
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets top="10.0" />
+                                            </VBox.margin>
+                                        </Button>
+                                    </children>
+                                    <HBox.margin>
+                                        <Insets left="10.0" right="10.0" />
+                                    </HBox.margin>
+                                </VBox>
+                                <TableView fx:id="tabelaNaglosnienie" prefWidth="830.0">
+                                    <columns>
+                                        <TableColumn fx:id="kolumnaNaglosnienieRodzaj" maxWidth="200.0" minWidth="50.0" prefWidth="120.0" text="Rodzaj" />
+                                        <TableColumn fx:id="kolumnaNaglosnienieNazwa" maxWidth="200.0" minWidth="50.0" prefWidth="120.0" text="Nazwa" />
+                                        <TableColumn fx:id="kolumnaNaglosnienieProducent" maxWidth="200.0" minWidth="50.0" prefWidth="120.0" text="Producent" />
+                                        <TableColumn fx:id="kolumnaNaglosnienieCena" maxWidth="200.0" minWidth="50.0" prefWidth="120.0" text="Cena" />
+                                        <TableColumn fx:id="kolumnaNaglosnienieKlasa" maxWidth="200.0" minWidth="50.0" prefWidth="120.0" text="Klasa" />
+                                    </columns>
+                                </TableView>
+                            </children>
+                        </HBox>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+    </children>
+</VBox>
