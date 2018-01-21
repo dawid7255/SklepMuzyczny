@@ -42,11 +42,11 @@ public class FXMLdodaj_uslugeController implements Initializable {
 
     @FXML
     private void zapisz_plikAction(ActionEvent event) throws IOException {
-        try {
+        /*try {
             Serializacja.ZapiszAction();
         } catch (IOException e) {
             e.printStackTrace();
-        }
+        }*/
     }
 
     @FXML
