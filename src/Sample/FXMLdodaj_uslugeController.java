@@ -1,15 +1,31 @@
 package Sample;
 
 import javafx.application.Platform;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import java.io.*;
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
+
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import static Sample.Serializacja.*;
+//import static Sample.Serializacja.listaUslug;
 
-public class FXMLstartController implements Initializable {
+public class FXMLdodaj_uslugeController implements Initializable {
 
+    //gitara
+    private @FXML TextArea nazwaUsluga;
+    private @FXML TextField czastrwaniaUsluga;
+    private @FXML TextField cenaUsluga;
+    private @FXML ComboBox<String> rodzajUsluga;
+    private ObservableList<String> rodzajeUslug = FXCollections.observableArrayList("Wypożyczenie sprzętu", "Obsługa sprzętu","Usługi serwisowe", "Lekcja gry na gitarze");
+
+    //funkcje menu
     @FXML
     private void STARTAction(ActionEvent event) throws IOException {
         Main.zmianaSceny("start.fxml");
@@ -63,6 +79,18 @@ public class FXMLstartController implements Initializable {
         onas.messagebox();
     }
 
+    @FXML
+    private void dodajUslugaAction (ActionEvent event) throws IOException{
+        listaUslug.add(new Uslugi(
+                nazwaUsluga.getText(),
+                Float.valueOf(cenaUsluga.getText()),
+                czastrwaniaUsluga.getText(),
+                rodzajUsluga.getValue()));
+    }
+
+    //inicjalizacja ComboBoxa
     @Override
-    public void initialize(URL location, ResourceBundle resources) {}
+    public void initialize(URL location, ResourceBundle resources) {
+        rodzajUsluga.setItems(rodzajeUslug);
+    }
 }
